@@ -398,42 +398,7 @@ const VerticalLayout = (props: any) => {
           </div>
         </Col>
         
-        <Row className=" g-0 text-center mt-0 p-5">
-
        
-        <Col>
-          <div className="p-0">
-            <button
-              title="Send Email"
-              type="button"
-              className="btn btn-soft-danger btn-icon d-grid"
-              onClick={() => tog_Claim()}
-            >
-              <i
-                className="bi bi-chat-left-quote"
-                style={{ fontSize: "24px" }}
-              ></i>
-              <span className="text-danger mt-1 fs-12">Claim</span>
-            </button>
-          </div>
-        </Col>
-        <Col>
-          <div className="p-0">
-            <button
-              title="Send Email"
-              type="button"
-              className="btn btn-soft-success btn-icon d-grid"
-              onClick={() => tog_ModalNotes()}
-            >
-              <i
-                className="bi bi-journal-bookmark"
-                style={{ fontSize: "24px" }}
-              ></i>
-              <span className="text-success mt-1 fs-12">Notes</span>
-            </button>
-          </div>
-        </Col>
-        </Row>
         {/* <Col>
           <div className="p-3">
             <button
@@ -451,6 +416,58 @@ const VerticalLayout = (props: any) => {
           </div>
         </Col> */}
       </Row>
+      <Row className="g-1 text-center mt-3">
+
+       
+<Col>
+  <div className="p-3">
+    <button
+      title="Claim"
+      type="button"
+      className="btn btn-soft-danger btn-icon d-grid"
+      onClick={() => tog_Claim()}
+    >
+      <i
+        className="bi bi-chat-left-quote"
+        style={{ fontSize: "24px" }}
+      ></i>
+      <span className="text-danger mt-1 fs-12">Claim</span>
+    </button>
+  </div>
+</Col>
+<Col>
+  <div className="p-3">
+    <button
+      title="Notes"
+      type="button"
+      className="btn btn-soft-success btn-icon d-grid"
+      onClick={() => tog_ModalNotes()}
+    >
+      <i
+        className="bi bi-journal-bookmark"
+        style={{ fontSize: "24px" }}
+      ></i>
+      <span className="text-success mt-1 fs-12">Notes</span>
+    </button>
+  </div>
+</Col>
+<Col>
+  <div className="p-3">
+    <button
+      title="Logout"
+      type="button"
+      className="btn btn-soft-primary btn-icon d-grid"
+      
+    >
+      <i
+        className="bi bi-box-arrow-right"
+        style={{ fontSize: "24px" }}
+      ></i>
+      <span className="text-primary mt-1 fs-12">Logout</span>
+    </button>
+  </div>
+</Col>
+</Row>
       <Modal
         className="fade zoomIn"
         size="lg"

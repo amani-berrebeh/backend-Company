@@ -161,24 +161,7 @@ const Navdata = () => {
         //     link: "/extra-trips",
          
         // },
-        // {
-        //     id: "Payments",
-        //     label: "Payments",
-        //     icon: "bi bi-credit-card-2-back",
-        //     link: "/#",
-        //     click: function (e: any) {
-        //         e.preventDefault();
-        //         setIsPayments(!isPayments);
-        //         setIscurrentState('Payments');
-        //         updateIconSidebar(e);
-        //     },
-        //     stateVariables: isPayments,
-        //     subItems: [
-        //         { id: "level1.1", label: "Employees", link: "/payment-employee", parentId: "Payments" },
-               
-        //         { id: "level1.3", label: "Management", link: "/payment-management", parentId: "Payments" },
-        //     ],
-        // },
+        
         {
             id: "Attendance",
             label: "Attendance",
@@ -215,6 +198,7 @@ const Navdata = () => {
                     icon: "bi bi-person-vcard"
                     
                 },
+               
                 // {
                 //     id: "Attendance",
                 //     label: "Attendance",
@@ -223,6 +207,27 @@ const Navdata = () => {
                 //     icon:  "bi bi-person-check"
                     
                 // }
+            ],
+        },
+         {
+            id: "Tools",
+            label: "Tools",
+            icon: "bi bi-gear",
+            link: "/#",
+            click: function (e: any) {
+                e.preventDefault();
+                setIsPayments(!isPayments);
+                setIscurrentState('Payments');
+                updateIconSidebar(e);
+            },
+            stateVariables: isPayments,
+            subItems: [
+                { id: "level1.1", label: "Claims", link: "/claims",  icon: "bi bi-chat-square-quote", parentId: "Payments" },
+               
+                { id: "level1.3", label: "Finance", link: "/payment-employee", icon: "bi bi-currency-pound", parentId: "Payments" },
+                { id: "level1.3", label: "Reporting", link: "/reporting", icon: "bi bi-graph-up-arrow", parentId: "Payments" },
+                { id: "level1.3", label: "Extra Trips" , icon: "bi bi-car-front", link: "/payment-management", parentId: "Payments" },
+                { id: "level1.3", label: "Delays & Changes", link: "/delays&changes", parentId: "Payments", icon: "bi bi-sign-turn-right-fill" },
             ],
         },
       

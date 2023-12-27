@@ -7,8 +7,10 @@ import { Link } from 'react-router-dom';
 import img1 from 'assets/images/users/avatar-1.jpg'
 
 const Profile = (props:any) => {
- console.log(props);
-
+const{
+    user_name, address, dropdown_time, mobile, group, station, user_img, trip_ref, email, pickup_time, 
+}= props
+console.log(props);
     return (
         <React.Fragment>
             {/* <Row> */}
@@ -19,17 +21,16 @@ const Profile = (props:any) => {
                                 <Col lg={3}>
                                     <div className="profile-user-img position-relative">
                                         <img src={img1} alt="" className="rounded object-fit-cover" />
-                                        <span className="position-absolute top-0 start-100 translate-middle badge border border-3 border-white rounded-circle bg-success p-1 mt-1 me-1"><span className="visually-hidden">unread messages</span></span>
+                                        {/* <span className="position-absolute top-0 start-100 translate-middle badge border border-3 border-white rounded-circle bg-success p-1 mt-1 me-1"><span className="visually-hidden">unread messages</span></span> */}
                                     </div>
                                 </Col>
                                 <Col lg={9}>
                                     <div className="d-flex border-bottom border-bottom-dashed pb-3 mb-0 mt-10 mt-lg-4">
                                         <div className="flex-grow-5">
-                                            <h4>{props}</h4>
+                                            <h4>{user_name}</h4>
                                             
-                                            <h5 className="text-muted mb-0">Sales & Marketing Manager</h5>
                                         </div>
-                                        <div className="flex-shrink-0">
+                                        {/* <div className="flex-shrink-0">
                                             <Dropdown>
                                                 <Dropdown.Toggle href="#" className="arrow-none btn btn-ghost-primary btn-sm btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <i className="ph-dots-three-outline"></i>
@@ -40,88 +41,103 @@ const Profile = (props:any) => {
                                                     <li><Dropdown.Item href="/#">Something else here</Dropdown.Item></li>
                                                 </Dropdown.Menu>
                                             </Dropdown>
-                                        </div>
+                                        </div> */}
                                     </div>
 
                                   
 
                                     <div className="mt-4">
-                                        <ul className="list-unstyled hstack gap-2 mb-">
-                                            <li>
-                                                Social Media:
-                                            </li>
-                                            <li>
-                                                <Link to="#!" className="btn btn-soft-secondary btn-icon"><i className="ph-facebook-logo"></i></Link>
-                                            </li>
-                                            <li>
-                                                <Link to="#!" className="btn btn-soft-danger btn-icon"><i className="ph-envelope"></i></Link>
-                                            </li>
-                                            <li>
-                                                <Link to="#!" className="btn btn-soft-primary btn-icon"><i className="ph-twitter-logo"></i></Link>
-                                            </li>
-                                            <li>
-                                                <Link to="#!" className="btn btn-soft-success btn-icon "><i className="ph-whatsapp-logo"></i></Link>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </Col>
-                            </Row>
-                            <Row>
-                                        <Col lg={6}>
+                                    <Col lg={6}>
                                             <div className="table-responsive">
-                                                <Table className="table-borderless mb-0">
+                                                <Table className=" mb-0">
                                                     <tbody>
                                                         <tr>
-                                                            <td>
-                                                                Station
+                                                            <td className="fw-bold">
+                                                                Address
                                                             </td>
                                                             <td className="fw-medium">
-                                                            
+                                                            {address}
                                                             </td>
                                                         </tr>
                                                         
                                                         <tr>
-                                                            <td>
+                                                            <td className="fw-bold">
+                                                                Station
+                                                            </td>
+                                                            <td className="fw-medium">
+                                                            {station}
+                                                            </td>
+                                                        </tr>  <tr>
+                                                            <td className="fw-bold">
+                                                                Mobile
+                                                            </td>
+                                                            <td className="fw-medium">
+                                                            {mobile}
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                </Table>
+                                            </div>
+                                            </Col>
+                                    </div>
+                                </Col>
+                            </Row>
+                            <Row className="mt-3 g-5">
+                                        <Col lg={6}>
+                                            <div className="table-responsive">
+                                                <Table className=" mb-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td className="fw-bold">
+                                                                Station
+                                                            </td>
+                                                            <td className="fw-medium">
+                                                            {station}
+                                                            </td>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <td className="fw-bold">
                                                                 Email:
                                                             </td>
                                                             <td className="fw-medium">
-                                                                
+                                                            {email}
                                                             </td>
                                                         </tr>
-                                                        <tr>
+                                                        {/* <tr>
                                                             <td>
                                                                 Date of Birth:
                                                             </td>
                                                             <td className="fw-medium">
                                                                 29 Oct, 1986
                                                             </td>
-                                                        </tr>
+                                                        </tr> */}
                                                         <tr>
-                                                            <td>
+                                                            <td className="fw-bold">
                                                                 Mobile / Phone No:
                                                             </td>
                                                             <td className="fw-medium">
-                                                                +(235) 01234 5678
+                                                                {mobile}
                                                             </td>
                                                         </tr>
-                                                        <tr>
+                                                        {/* <tr>
                                                             <td>
                                                                 Total Reviews:
                                                             </td>
                                                             <td className="fw-medium">
                                                                 <i className="bi bi-star-half text-warning align-middle me-1"></i> 365
                                                             </td>
-                                                        </tr>
+                                                        </tr> */}
                                                     </tbody>
                                                 </Table>
                                             </div>
                                         </Col>
-                                        <Col lg={6}>
-                                            <div className="table-responsive">
-                                                <Table className="table-borderless mb-0">
+                                    <Col lg={6}>
+                                            <div className="table-responsive g-3">
+                                                <Table className=" mb-0">
                                                     <tbody>
                                                         <tr>
-                                                            <td>
+                                                            <td className="fw-bold">
                                                                 Designation:
                                                             </td>
                                                             <td className="fw-medium">
@@ -129,7 +145,7 @@ const Profile = (props:any) => {
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>
+                                                            <td className="fw-bold">
                                                                 Total Trips:
                                                             </td>
                                                             <td className="fw-medium">
@@ -137,7 +153,7 @@ const Profile = (props:any) => {
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>
+                                                            <td className="fw-bold">
                                                                 Orders:
                                                             </td>
                                                             <td className="fw-medium">
@@ -145,7 +161,7 @@ const Profile = (props:any) => {
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>
+                                                            <td className="fw-bold">
                                                                 Earnings
                                                             </td>
                                                             <td className="fw-medium">

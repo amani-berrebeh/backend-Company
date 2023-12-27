@@ -72,12 +72,12 @@ const Account = () => {
                     return (
                         <ul className="hstack gap-2 list-unstyled mb-0">
                             <li>
-                                <Link to="#" className="badge badge-soft-primary edit-item-btn">Edit</Link>
+                                <Link to="#" className="badge bg-success-subtle text-success edit-item-btn"><i className="ph ph-pencil-line"></i></Link>
                             </li>
                             <li>
-                                <Link to="#" className="badge badge-soft-danger remove-item-btn">Delete</Link>
+                                <Link to="#" className="badge bg-danger-subtle text-danger remove-item-btn"><i className="ph ph-trash"></i></Link>
                             </li> <li>
-                                <Link to="/single-account" state={cellProps} className="badge badge-soft-success view-item-btn">View</Link>
+                                <Link to="/single-account" state={cellProps} className="badge bg-info-subtle text-info view-item-btn"><i className="ph ph-eye"></i></Link>
                             </li>
                         </ul>
                     )

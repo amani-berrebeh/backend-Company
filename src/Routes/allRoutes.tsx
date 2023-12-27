@@ -80,6 +80,7 @@ import TransactionsTable from "pages/Accounts/MyAccount/TransactionsTable";
 import Offers from "pages/Programming/Offer";
 import Reporting from "pages/Reporting";
 import SingleProfile from "pages/Employees/Accounts/SingleAccount";
+import Claims from "pages/claims";
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: <Dashboard /> },
@@ -136,7 +137,7 @@ const authProtectedRoutes = [
 
    //? Claims
 
-{ path: "/claims", component: <Transactions /> },
+{ path: "/claims", component: <Claims /> },
 { path: "/claim-detail", component: <ClaimDetails/> },
  //? Contract
  { path: "/contracts", component: <Contract /> },
